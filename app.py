@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 import streamlit as st
 
 st.title("サンプルアプリ②: 少し複雑なWebアプリ")
@@ -12,6 +13,18 @@ st.write("入力フォームにテキストを入力し、「実行」ボタン�
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
+
+
+# human_message = HumanMessage(content="私の名前は良子です。")
+
+# ai_message = AIMessage(content="こんにちは、太郎さん！")
+
+# human_message2 = HumanMessage(content="私の名前が分かりますか？")
+
+# messages = [human_message, ai_message, human_message2]
+
+# ai_response = llm(messages)
+# print(ai_response.content)
 
 selected_item = st.radio(
     "動作モードを選択してください。",
